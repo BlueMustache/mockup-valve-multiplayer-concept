@@ -10,7 +10,7 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import world.WorldTimer;
+import world.GameMainLoop;
 
 /**
  * Created by zyl on 2017/7/7.
@@ -47,7 +47,7 @@ public class SimpleGameServer
             ChannelFuture future = serverBootStrap.bind(8077).sync();
             future.awaitUninterruptibly();
 
-            WorldTimer gameLoop = new WorldTimer();
+            GameMainLoop gameLoop = new GameMainLoop();
 
             new Thread(
                 ()->{

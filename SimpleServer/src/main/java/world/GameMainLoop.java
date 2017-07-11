@@ -6,7 +6,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * Created by zyl on 2017/6/30.
  */
-public class WorldTimer
+public class GameMainLoop
 {
 
     static long startTimeBase = 0;
@@ -14,7 +14,7 @@ public class WorldTimer
     static long timePrev = 0;
     static long currentTime = 0;
 
-    public WorldTimer()
+    public GameMainLoop()
     {
     }
 
